@@ -15,6 +15,7 @@
 		7972A34F1FC6A9540062D796 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972A34E1FC6A9540062D796 /* main.m */; };
 		7972A3591FC6A9540062D796 /* MVPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972A3581FC6A9540062D796 /* MVPDemoTests.m */; };
 		7972A3641FC6A9540062D796 /* MVPDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972A3631FC6A9540062D796 /* MVPDemoUITests.m */; };
+		7972A3771FC6B5250062D796 /* ContainerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972A3761FC6B5250062D796 /* ContainerModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7972A35F1FC6A9540062D796 /* MVPDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7972A3631FC6A9540062D796 /* MVPDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPDemoUITests.m; sourceTree = "<group>"; };
 		7972A3651FC6A9540062D796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7972A3751FC6B5250062D796 /* ContainerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerModel.h; sourceTree = "<group>"; };
+		7972A3761FC6B5250062D796 /* ContainerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainerModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,9 @@
 		7972A33E1FC6A9540062D796 /* MVPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7972A3731FC6AC4F0062D796 /* View */,
+				7972A3721FC6AC470062D796 /* Protocol */,
+				7972A3711FC6AC400062D796 /* Model */,
 				7972A33F1FC6A9540062D796 /* AppDelegate.h */,
 				7972A3401FC6A9540062D796 /* AppDelegate.m */,
 				7972A3421FC6A9540062D796 /* ViewController.h */,
@@ -130,6 +136,29 @@
 				7972A3651FC6A9540062D796 /* Info.plist */,
 			);
 			path = MVPDemoUITests;
+			sourceTree = "<group>";
+		};
+		7972A3711FC6AC400062D796 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7972A3751FC6B5250062D796 /* ContainerModel.h */,
+				7972A3761FC6B5250062D796 /* ContainerModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7972A3721FC6AC470062D796 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7972A3731FC6AC4F0062D796 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +297,7 @@
 				7972A3441FC6A9540062D796 /* ViewController.m in Sources */,
 				7972A34F1FC6A9540062D796 /* main.m in Sources */,
 				7972A3411FC6A9540062D796 /* AppDelegate.m in Sources */,
+				7972A3771FC6B5250062D796 /* ContainerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

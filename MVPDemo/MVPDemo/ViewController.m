@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property  (nonatomic, strong)  UITableView  *tableView;
 @end
 
 @implementation ViewController
@@ -25,5 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        
+    }
+    return _tableView;
+}
 @end

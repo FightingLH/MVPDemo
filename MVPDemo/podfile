@@ -1,0 +1,6 @@
+target 'MVPDemo' do
+pod 'Masonry'
+pod 'AFNetworking'
+pod 'YYModel'
+
+end

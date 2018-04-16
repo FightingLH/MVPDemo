@@ -22,9 +22,15 @@
 
 - (void)getServiceData
 {
+    [self.control requestStart:@"开始"];
     if (self.control) {
-        NSLog(@"请求参数---->%@",self.control.paremeter);
-        [self.control reloadOriginData:@"请求数据"];
+        [self.control requestEnd:@"结束"];
+        NSMutableArray *data = [NSMutableArray new];
+        for (NSInteger i = 0; i < arc4random()%100; i ++) {
+            [data addObject:[NSString stringWithFormat:@"第%@个",@(i)]];
+        }
+        
+        [self.control reloadOriginData:data];
     }
 }
 

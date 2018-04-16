@@ -23,4 +23,14 @@
  */
 
 - (void)reloadOriginData:(id)data;
+
+/**
+ *
+ * 请求开始,处理请求前加载方式或其他 type:当前请求者
+ * type 开始和结束要对应
+ */
+- (void)requestStart:(id)type;
+
+- (void)requestEnd:(id)type;
+
 @end

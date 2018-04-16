@@ -15,6 +15,8 @@
 @property  (nonatomic, strong)  PageOneControllerPresenter *presenter;
 
 @property  (nonatomic, strong)  UITableView  *tableView;
+@property  (nonatomic, strong)  NSArray      *data;
+
 @end
 
 @implementation PageOneController
@@ -33,10 +35,23 @@
 }
 
 
-//delegate
+//开始请求
+- (void)requestStart:(id)type
+{
+    NSLog(@"Start---->%@",type);
+}
+
+//结束请求
+- (void)requestEnd:(id)type
+{
+    NSLog(@"End---->%@",type);
+}
+
+//获取请求结果
 - (void)reloadOriginData:(id)data
 {
-    NSLog(@"%@",data);
+    self.data = [NSArray arrayWithArray:data];
+     NSLog(@"Result---->%@",data);
 }
 
 - (NSDictionary *)paremeter
@@ -61,7 +76,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return self.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,7 +86,7 @@
         {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"test"];
         }
-        cell.textLabel.text = @"测试";
+        cell.textLabel.text = self.data[indexPath.row];
         return cell;
 }
 
